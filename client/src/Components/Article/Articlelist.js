@@ -9,7 +9,7 @@ const Articlelist = () => {
     dispatch(get_articles());
   }, []);
   const { articles } = useSelector((state) => state.articleReducer);
-  console.log("ff", articles);
+  
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ const Articlelist = () => {
         flexWrap: "wrap",
       }}
     >
-      {articles.map((el) => (
+      {articles.map((el) => el.role =="article" && (
         <div key={el._id}>
           <ArticleCard el={el} />
         </div>

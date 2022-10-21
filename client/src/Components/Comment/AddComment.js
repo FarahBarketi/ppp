@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { add_comment } from "../../Redux/Action/CommentAction";
 import { FaRegCommentDots } from "react-icons/fa";
 
-const AddComment = () => {
+const AddComment = ({id}) => {
   const dispatch = useDispatch();
 
   const [show, setShow] = useState(false);
@@ -22,7 +22,7 @@ const AddComment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      add_comment({ date, body }),
+      add_comment(id,{ date, body }),
       handleClose(),
       navigate("/articles")
     );

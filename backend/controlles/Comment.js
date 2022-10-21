@@ -1,17 +1,19 @@
+const { isAuth } = require("../Middlewear/isAuth");
 const comments = require("../models/Comment");
 
 exports.Addcomment = async (req, res) => {
   try {
-    const comment= new comments(req.body);
+    const comment= new comments({...req.body,articleId:req.params.id });
     await comment.save();
     res.status(200).send({ msg: "new comment", comment });
   } catch (error) {
     res.status(500).send({ msg: "couldn't add  comment" });
   }
-};
+}
 exports.Getcomments = async (req, res) => {
+
   try {
-    const comment = await comments.find();
+    const comment = await comments.find().populate('articleId')
     res.status(200).send({ msg: "our comments", comment });
   } catch (error) {
     res.status(500).send({ msg: "could not get comments" });

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import CommentList from "./CommentList";
 
-const Comments = () => {
+const Comments = ({el}) => {
   const [showResults, setShowResults] =useState(false)
   const onClick = () => setShowResults(!showResults)
 
@@ -12,7 +12,7 @@ const Comments = () => {
   return (
     <div>
    <input type="submit" value="comments" onClick={onClick} />
-      { showResults ? <CommentList /> : null }
+      { showResults ? <CommentList el={el}/> : null }
     </div>
   );
 };

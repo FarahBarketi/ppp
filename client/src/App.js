@@ -14,6 +14,8 @@ import AddArticle from "./Components/Article/AddArticle";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { get_current } from "./Redux/Action/authAction";
+import AccouplementList from "./Components/Accouplement/AccouplementList";
+import Add from "./Components/Add";
 
 function App() {
 const dispatch=useDispatch()
@@ -25,14 +27,15 @@ useEffect(()=>{
       <Alerterrors />
 
       <Sidebar>
+      
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/Profile" element={<UserProfile />} />
-          <Route path="/addarticle" element={<AddArticle />} />
+          <Route path="/addarticle" element={<Add />} />
           <Route path="/articles" element={<Articlelist />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
+          <Route path="/accouplement" element={<AccouplementList />} />
         </Routes>
       </Sidebar>
     </div>

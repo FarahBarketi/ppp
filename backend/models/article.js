@@ -4,7 +4,12 @@ const articleSchema = new mongoose.Schema({
   location: String,
   description: String,
   price: Number,
-  image :String, 
+  image :String,
+  role: {
+    type: String,
+    enum: ["article", "accouplement"],
+    default: "article",
+  },
 
 });
 module.exports = mongoose.model("article", articleSchema);

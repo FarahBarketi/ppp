@@ -14,8 +14,8 @@ import { Navigate } from "react-router-dom";
 import axios from "axios";
 import { useRef } from "react";
 
-const UsersCard = ({ el }) => {
-  const [show, setShow] = useState(false);
+const AccouplementCard = ({el}) => {
+    const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -48,11 +48,9 @@ const UsersCard = ({ el }) => {
     }catch (error){
   console.log(error);
       }}
- 
-      // const  comment  = useSelector((state) => state.CommentReducer.comments);
   return (
     <div>
-      <Card
+              <Card
         style={{
           width: "18rem",
 
@@ -175,7 +173,7 @@ variant="top"
         </ListGroup>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default UsersCard;
+export default AccouplementCard

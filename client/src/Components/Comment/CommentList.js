@@ -4,13 +4,15 @@ import { get_comments } from "../../Redux/Action/CommentAction";
 
 
 import CommentCard from "./CommentCard";
-const CommentList = () => {
+const CommentList = ({el}) => {
+  console.log(el._id,"ousil")
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(get_comments());
   }, []);
   const  comment  = useSelector((state) => state.CommentReducer.comments);
-  console.log("vyify_ffy", comment);
+  const { articles } = useSelector((state) => state.articleReducer);
+ 
   return (
     <div
       style={{
@@ -19,10 +21,13 @@ const CommentList = () => {
         flexWrap: "wrap",
       }}
     >
-      {comment.map((el) => (
-        <div key={el._id}>
-          <CommentCard el={el} />
-        </div>
+      
+   
+      {comment.map((comments) => (
+        el._id==comments.articleId._id ?
+        <div key={comments._id}>
+          <CommentCard comments={comments} />
+        </div> :"no comments"
       ))}
     </div>
   );

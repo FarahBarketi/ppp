@@ -8,20 +8,20 @@ import Modal from "react-bootstrap/Modal";
 import { del_comment, edit_comment } from "../../Redux/Action/CommentAction";
 
 
-const UsersCard = ({ el }) => {
-  console.log(el);
+const UsersCard = ({ comments }) => {
+  console.log(comments);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
-  const [date, setDate] = useState(el.date);
-  const [body, setBody] = useState(el.body);
+  const [date, setDate] = useState(comments.date);
+  const [body, setBody] = useState(comments.body);
   
   const handleEdit = (e) => {
     e.preventDefault();
     dispatch(
-      edit_comment(el._id, { date, body }),
+      edit_comment(comments._id, { date, body }),
       handleClose()
     );
   };
@@ -35,15 +35,15 @@ const UsersCard = ({ el }) => {
         }}
       >
         <ListGroup variant="flush">
-          <ListGroup.Item>{el.date}</ListGroup.Item>
-          <ListGroup.Item> {el.body}</ListGroup.Item>
+          <ListGroup.Item>{comments.date}</ListGroup.Item>
+          <ListGroup.Item> {comments.body}</ListGroup.Item>
           
           <ListGroup.Item
             style={{ display: "flex", justifyContent: "space-between" }}
           >
             <Button
               variant="danger"
-              onClick={() => dispatch(del_comment(el._id))}
+              onClick={() => dispatch(del_comment(comments._id))}
             >
               DELETE
             </Button>

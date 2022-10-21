@@ -9,9 +9,9 @@ export const get_comments = () => async (dispatch) => {
     console.log(error);
   }
 };
-export const add_comment = (data) => async (dispatch) => {
+export const add_comment = (id,data) => async (dispatch) => {
   try {
-    const res = await axios.post("/comments/add", data);
+    const res = await axios.post(`/comments/add/${id}`, data);
     console.log(res.data);
     dispatch(get_comments());
   } catch (error) {

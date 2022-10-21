@@ -10,6 +10,7 @@ import {
   FaMoneyCheck,
   FaAngleDoubleLeft,
   FaBarcode,
+  FaDog,
 } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -37,9 +38,9 @@ const Sidebar = ({ children }) => {
         icon: <FaUserAlt />,
       },
       {
-        path: "/comment",
-        name: "Comment",
-        icon: <FaCommentAlt />,
+        path: "/accouplement",
+        name: "accouplement",
+        icon: <FaDog />,
       },
       {
         path: "/articles",

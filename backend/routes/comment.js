@@ -4,7 +4,7 @@ const { Addcomment, Getcomments, Deletecomments, Updatecomments } = require("../
 
 const commentRoutes = express.Router();
 
-commentRoutes.post("/add", Addcomment);
+commentRoutes.post("/add/:id", Addcomment);
 commentRoutes.get("/get", Getcomments);
 commentRoutes.delete("/del/:id", Deletecomments);
 commentRoutes.put("/put/:id", Updatecomments);

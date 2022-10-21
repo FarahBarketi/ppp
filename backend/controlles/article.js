@@ -1,9 +1,18 @@
-const express = require ("express");
 const articles = require("../models/article");
+exports.updateArticleImage=async(req,res)=>{
+ 
+  try {
+  await articles.findByIdAndUpdate(req.params.id,{$set:{image:req.file.filename}})
+     res.status(200).send("image added") 
+  } catch (error) {
+     res.status(500).send('servor error') 
+  }
+}
+
 
 exports.Addarticle = async (req, res) => {
  
-  console.log(req.file);
+  
   try {
     const article = new articles(req.body);
     await article.save();
@@ -15,7 +24,7 @@ exports.Addarticle = async (req, res) => {
 
 exports.Getarticles = async (req, res) => {
   try {
-    const article = await articles.find();
+    const article = await articles.find()
     res.status(200).send({ msg: "our articles", article });
   } catch (error) {
     res.status(500).send({ msg: "could not get articles" });
