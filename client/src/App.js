@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { get_current } from "./Redux/Action/authAction";
 import AccouplementList from "./Components/Accouplement/AccouplementList";
 import Add from "./Components/Add";
+import LandingPage from "./Components/LandingPage";
 
 function App() {
 const dispatch=useDispatch()
@@ -29,6 +30,7 @@ useEffect(()=>{
       <Sidebar>
       
         <Routes>
+        <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/Profile" element={<UserProfile />} />
           <Route path="/addarticle" element={<Add />} />
