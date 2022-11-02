@@ -7,7 +7,7 @@ import { add_article, get_articles } from "../Redux/Action/articleAction";
 import {  Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
-
+import { FaAngellist } from "react-icons/fa";
 const Add = () => {
     const dispatch = useDispatch();
 
@@ -48,10 +48,12 @@ const Add = () => {
         margin: " 4rem auto ",
         marginLeft:'15rem'
       }}><div className="signup-container">
-    <div className="left-container">
+      <div className="left-container">
       <h1>
-        <i className="fas fa-paw" />
-        Farah for dogs
+       
+        <FaAngellist/> Hello My Besties <FaAngellist/>
+       
+       
       </h1>
       <div className="puppy">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png" />

@@ -20,12 +20,22 @@ const Register = () => {
   };
 
   return (
+    <div className="gatous">
+    <img style={{
+        borderRadius:"5px 0   0 5px",
+        width: "30rem",
+        height:"26rem",
+      }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BwdDupaiSdXBMHVGCHRiWxHX7qihQQdfgT6Nae1sf0VW1u9dMiq8KIPkrSviMitgH9E&usqp=CAU"/>
+  
     <div>
       <div>
         <Card
           style={{
-            margin: " 4rem auto ",
+            borderRadius:" 0 5px 5px 0",
             width: "30rem",
+            height:"26rem",
+            backgroundColor:"hsl(207,19%,9%)",
+            color:"white"
           }}
         >
           <Card.Body>
@@ -33,6 +43,7 @@ const Register = () => {
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
+                 style={{backgroundColor:"hsl(207,19%,9%)",border:"none",borderBottom: "solid white",color:"white"}}
                   type="text"
                   placeholder="Enter your name"
                   onChange={(e) => setName(e.target.value)}
@@ -43,6 +54,7 @@ const Register = () => {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
+                 style={{backgroundColor:"hsl(207,19%,9%)",border:"none",borderBottom: "solid white",color:"white"}}
                   type="email"
                   placeholder="Enter email"
                   onChange={(e) => setEmail(e.target.value)}
@@ -56,6 +68,7 @@ const Register = () => {
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
+                 style={{backgroundColor:"hsl(207,19%,9%)",border:"none",borderBottom: "solid white",color:"white"}}
                   type="password"
                   placeholder="Password"
                   value={password}
@@ -63,17 +76,23 @@ const Register = () => {
                 />
               </Form.Group>
               <Form.Group
+              
                 className="mb-3"
                 controlId="formBasicCheckbox"
               ></Form.Group>
+              
               <Form.Label>Role</Form.Label>
+             
             <Form.Select onChange={(e) => setrole(e.target.value)} value={role}>
+              
               <option>choose your role</option>
               <option>user</option>
               <option>Baladia</option>
               <option>vet</option>
+              
             </Form.Select>
               <Button
+              
                 variant="warning"
                 type="submit"
                 style={{
@@ -87,6 +106,7 @@ const Register = () => {
             </Form>
           </Card.Body>
         </Card>
+        </div>
       </div>
     </div>
   );
