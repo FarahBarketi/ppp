@@ -1,63 +1,43 @@
 
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/esm/Button';
-import { FaShoppingCart } from 'react-icons/fa';
 const Home = () => {
-  const [index, setIndex] = useState(0);
+  return (
+    <div className='LandingPage'>
+        
+    <div className='landing' >
+        
+       
+        <p className='parag'>
+           
+            <span className='para'>Hello , if you are looking for a friend you come to the<br/></span>
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+            <span className='para'>right place in this website you will found what<br/></span>
 
-  return <div className='home' >
-    <section>
-  <Carousel  activeIndex={index} onSelect={handleSelect} style={{witdh:"100%"}}>
-      <Carousel.Item>
-        <img style={{witdh:"1000px",height:"500px"}}
-          className="d-block w-100"
-          src="https://www.colonelgustave.com/wp-content/uploads/2021/02/Golden-retriever-e1613467936598.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>Golden retriver</h3>
-          <p>get your best friend new</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img style={{witdh:"1000px",height:"500px"}}
-          className="d-block w-100"
-          src="https://www.woopets.fr/assets/races/000/160/og-image/chow-chow_2.jpg"
-          alt="Second slide"
-        />
+            <span className='para'>you are looking for we have multiple<br/></span>
 
-        <Carousel.Caption>
-          <h3>chaw chaw </h3>
-          <p>I am the lion</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img style={{witdh:"1000px",height:"500px"}}
-          className="d-block w-100"
-          src="https://www.woopets.fr/assets/races/000/213/og-image/husky-siberien_2.jpg"
-          alt="Third slide"
-        />
+            <span className='para'> choices from top breeds to best toys<br/></span>
 
-        <Carousel.Caption>
-          <h3>husky</h3>
-          <p>
-            snow
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel></section>
-<section className='about-us'>
-  <h1> About us</h1>
-  <p>Les interactions homme-animal se font d'abord par le toucher et le regard, ce qui place très vite la relation dans le registre de l'intime. La présence d'un animal peut aussi faciliter la communication sociale</p>
-    <Button variant="success" href="/productList">Shop now <FaShoppingCart/></Button>
-</section>
-  </div>;
-};
+            <span className='para'> for your animals. you can found<br/></span>
+
+            <span className='para'> vets and specialist on our</span><br/>
+            <span className='para'> website to help your </span><br/>
+            <span className='para'>with your pet </span>
+            
+            
+            </p>
+        
+         
+
+          <span className='btnss'> <Link to="/login"> <button className="button-85" role="button">Log in</button></Link>
+           
+           <Link to="/register"> <button className="button-85" role="button">register</button></Link></span>
+ 
+  </div>
+ 
+  </div>
+  )
+}
 
 export default Home;

@@ -50,7 +50,7 @@ const AccouplementCard = ({el}) => {
       }}
   return (
     <div>
-              <Card
+              <Card className="card-shadow"
         style={{
           width: "18rem",
 
@@ -164,7 +164,7 @@ variant="top"
               </Modal.Footer>
             </Modal>
           </ListGroup.Item>
-          <ListGroup.Item >
+          <ListGroup.Item style={{display:"flex",justifyContent:"center",alignContent:"center"}}>
             <Comments el={el}/>
           </ListGroup.Item>
           

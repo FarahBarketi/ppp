@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import Button from "react-bootstrap/esm/Button";
+import { FaComments } from "react-icons/fa";
 
 import CommentList from "./CommentList";
 
@@ -11,7 +13,7 @@ const Comments = ({el}) => {
  
   return (
     <div>
-   <input type="submit" value="comments" onClick={onClick} />
+      <Button variant="success" type="submit" value="comments" onClick={onClick} ><FaComments/></Button>
       { showResults ? <CommentList el={el}/> : null }
     </div>
   );

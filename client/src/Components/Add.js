@@ -49,19 +49,19 @@ const Add = () => {
         marginLeft:'15rem'
       }}><div className="signup-container">
       <div className="left-container">
-      <h1>
-       
+      <i>
+       <h2>
         <FaAngellist/> Hello My Besties <FaAngellist/>
+       </h2>
        
-       
-      </h1>
+      </i>
       <div className="puppy">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png" />
       </div>
     </div>
     <div className="right-container">
       <header>
-        <h1>Add your choice to sell </h1>
+        <h2>Add your choice to sell </h2>
         <div className="set">
           <div className="pets-name">
             <label htmlFor="pets-name">Title</label>

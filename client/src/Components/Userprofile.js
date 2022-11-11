@@ -27,7 +27,6 @@ const UserProfile = () => {
     <div>
       <Card style={{ width: "18rem", margin: "auto", marginTop: "50px" }}>
         <Card.Img
-
           variant="top"
           src=
          {user?.image ? `uploads/${user?.image}`

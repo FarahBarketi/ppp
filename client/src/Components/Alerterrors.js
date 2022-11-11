@@ -11,7 +11,7 @@ const Alerterrors = () => {
   const toggleShowA = () => setShowA(!showA);
  
   return (
-    <div>
+    <div style={{display:"flex",justifyContent:"center",alignContent:"center"}}>
       {errors.map((el, idx) => (
         <Toast
           className="d-inline-block m-1"

@@ -82,15 +82,20 @@ const Register = () => {
               ></Form.Group>
               
               <Form.Label>Role</Form.Label>
-             
-            <Form.Select onChange={(e) => setrole(e.target.value)} value={role}>
-              
-              <option>choose your role</option>
-              <option>user</option>
+      <Form.Select
+        style={{
+          backgroundColor: "black",
+          border: "0 0 1 solid white 0 ",
+        }}
+        className="hevi"
+      >
+        <option>choose your role</option>
+        <option>user</option>
               <option>Baladia</option>
               <option>vet</option>
-              
-            </Form.Select>
+        
+      </Form.Select>
+    
               <Button
               
                 variant="warning"

@@ -1,4 +1,6 @@
 import { GET_ARTICLES } from "../Types/ArticleTypes";
+import { alert_error } from "./errorActions";
+import {FAIL} from "../Types/authTypes";
 import axios from "axios";
 export const get_articles = () => async (dispatch) => {
   try {
@@ -15,7 +17,10 @@ export const add_article = (data) => async (dispatch) => {
     console.log(res.data);
     dispatch(get_articles());
   } catch (error) {
-    console.log(error);
+    error.response.data.errors.forEach((el) => {
+      dispatch(alert_error(el.msg));
+    });
+    dispatch({ type: FAIL, payload: error.response.data });
   }
 };
 export const del_article = (id) => async (dispatch) => {
@@ -24,7 +29,10 @@ export const del_article = (id) => async (dispatch) => {
 
     dispatch(get_articles());
   } catch (error) {
-    console.log(error);
+    error.response.data.errors.forEach((el) => {
+      dispatch(alert_error(el.msg));
+    });
+    dispatch({ type: FAIL, payload: error.response.data });
   }
 };
 export const edit_article = (id, data) => async (dispatch) => {
@@ -33,6 +41,9 @@ export const edit_article = (id, data) => async (dispatch) => {
 
     dispatch(get_articles());
   } catch (error) {
-    console.log(error);
+    error.response.data.errors.forEach((el) => {
+      dispatch(alert_error(el.msg));
+    });
+    dispatch({ type: FAIL, payload: error.response.data });
   }
 };
