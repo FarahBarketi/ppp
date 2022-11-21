@@ -40,7 +40,7 @@ const LandingPage = () => {
       <div className="intro">
         <div className="title">
           <h1>
-            farah maklib is the best website to sell / buy Pets and their
+          Животни is the best website to sell / buy Pets and their
             Supplies!
           </h1>
         
@@ -98,7 +98,7 @@ const LandingPage = () => {
         <h2>Our Values</h2>
         <h3>We work hard, and we win.</h3>
         <p>
-          At farah maklib, we strive to deliver the best products with the best
+          At Животни, we strive to deliver the best products with the best
           service – and we want to become even better. Happy customers are
           always our #1 priority, and our team members are passionate about
           finding new ways to wow both pet owners and the industry at large.

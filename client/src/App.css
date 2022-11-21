@@ -462,6 +462,7 @@ footer{
     margin: 5rem 0rem 0rem 0rem;
     text-align: center;
 	background-color: #000000;
+	color: white;
   }
   .mt-2{
 	margin-right: 10%;
@@ -498,7 +499,7 @@ box-shadow: inset 20px 20px 60px #913ca0,
 
 .neo-button:active {
    border-radius: 50%;
-background: #AB47BC;
+   background: #AB47BC;
 box-shadow:  28px 28px 57px #933da2, 
              -28px -28px 57px #c351d6;
 }
